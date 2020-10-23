@@ -15,5 +15,6 @@ create unique index type_uindex
 insert type (type) values
 ('English'),
 ('Korean'),
+('Kanji'),
 ('Zenkaku'),
 ('Zenkaku with Sutegana');
