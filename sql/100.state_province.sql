@@ -22,4 +22,3 @@ create unique index state_name_eng_uindex
 
 create unique index state_name_ext_uindex
 	on state_province (name_ext);
-
