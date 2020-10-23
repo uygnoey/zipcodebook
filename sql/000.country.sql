@@ -26,4 +26,3 @@ insert country (code, name, name_eng, name_ext) values
 ('US', 'UNITED STATES', 'UNITED STATES', null),
 ('KR', '대한민국', 'KOREA OF REPUBLIC', 'SOUTH KOREA'),
 ('JP', '日本', 'JAPAN', null);
-
