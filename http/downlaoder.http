@@ -1,0 +1,15 @@
+GET http://localhost:8080/api/download/zipcode/kor
+
+###
+
+GET http://localhost:8080/api/download/zipcode/jpn/english
+
+###
+
+GET http://localhost:8080/api/download/zipcode/jpn/oogaki
+
+###
+
+GET http://localhost:8080/api/download/zipcode/jpn/kogaki
+
+###
