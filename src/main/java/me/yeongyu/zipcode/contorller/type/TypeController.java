@@ -61,7 +61,6 @@ public class TypeController {
     public int update(@RequestBody List<LangType> langTypeList) {
         log.info("UPDATE Type List: {}", langTypeList);
 
-
         return langTypeList.stream()
                 .filter(Objects::nonNull)
                 .filter(langType -> langType.getId() != null && !StringUtils.isBlank(langType.getType()))
