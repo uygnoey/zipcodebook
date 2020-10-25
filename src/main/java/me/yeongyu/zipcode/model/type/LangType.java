@@ -1,7 +1,8 @@
-package me.yeongyu.zipcode.model;
+package me.yeongyu.zipcode.model.type;
 
 import lombok.Data;
 import lombok.ToString;
+import me.yeongyu.zipcode.model.state.State;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
@@ -9,12 +10,10 @@ import java.util.List;
 
 @Data
 @ToString
-public class State {
+public class LangType {
 
     private Integer id;
-    private Integer typeId;
-    private Integer countryId;
-    private String state;
+    private String type;
     @DateTimeFormat(pattern = "yyyyMMddHHmmss")
     private Date updateDate;
 

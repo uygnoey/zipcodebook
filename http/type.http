@@ -1,0 +1,51 @@
+GET http://localhost:8080/api/type/
+Accept: application/json
+
+###
+
+GET http://localhost:8080/api/type/1
+Accept: application/json
+
+###
+
+POST http://localhost:8080/api/type/
+Accept: application/json
+Content-Type: application/json
+
+[
+  "test",
+  "test2",
+  "test"
+]
+
+###
+
+PUT http://localhost:8080/api/type/
+Accept: application/json
+Content-Type: application/json
+
+[
+  {
+    "id": 8,
+    "type": "teee"
+  },
+  {
+    "id": 9,
+    "type": ""
+  },
+  {
+    "type": "22"
+  },
+  {
+    "id": 8
+  },
+  {}
+]
+
+###
+
+DELETE http://localhost:8080/api/type/8
+Accept: application/json
+Content-Type: application/json
+
+###
