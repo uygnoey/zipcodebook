@@ -39,12 +39,20 @@ Content-Type: application/json
   {
     "id": 8
   },
-  {}
+  {},
+  {
+    "id": 3,
+    "type": "oogaki"
+  },
+  {
+    "id": 4,
+    "type": "kogaki"
+  }
 ]
 
 ###
 
-DELETE http://localhost:8080/api/type/8
+DELETE http://localhost:8080/api/type/9
 Accept: application/json
 Content-Type: application/json
 
