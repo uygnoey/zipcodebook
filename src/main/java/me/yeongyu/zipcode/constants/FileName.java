@@ -1,10 +1,10 @@
 package me.yeongyu.zipcode.constants;
 
 public enum FileName {
-    KOR_ALL ("korea_all.zip"),
-    JPN_OOGAKI_ALL ("japan_oogaki_all.zip"),
-    JPN_KOGAKI_ALL ("japan_kogaki_all.zip"),
-    JPN_ENGLISH_ALL ("japan_kogaki_all.zip")
+    KOR_ALL ("korean_all.zip"),
+    JPN_OOGAKI_ALL ("japanese_oogaki_all.zip"),
+    JPN_KOGAKI_ALL ("japanese_kogaki_all.zip"),
+    JPN_ENGLISH_ALL ("japanese_english_all.zip")
     ;
 
     private final String fileName;

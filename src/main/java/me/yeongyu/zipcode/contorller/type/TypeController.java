@@ -26,8 +26,13 @@ import java.util.Objects;
 @RequestMapping("/api/type")
 public class TypeController {
 
-    @Autowired
+    final
     TypeService typeService;
+
+    @Autowired
+    public TypeController(TypeService typeService) {
+        this.typeService = typeService;
+    }
 
     @GetMapping("/")
     public CommonResponse<LangType> getList(SearchLangType search) {
@@ -49,25 +54,14 @@ public class TypeController {
     public int insert(@RequestBody List<String> typeList) {
         log.info("INSERT Type List: {}", typeList);
 
-        return typeList.stream()
-                .filter(type-> !StringUtils.isBlank(type))
-                .mapToInt(type -> {
-                    log.info("INSERT LangType: {}", type);
-                    return typeService.insert(type);
-                }).sum();
+        return typeService.insert(typeList);
     }
 
     @PutMapping("/")
     public int update(@RequestBody List<LangType> langTypeList) {
         log.info("UPDATE Type List: {}", langTypeList);
 
-        return langTypeList.stream()
-                .filter(Objects::nonNull)
-                .filter(langType -> langType.getId() != null && !StringUtils.isBlank(langType.getType()))
-                .mapToInt(langType -> {
-                    log.info("UPDATE LangType: {}", langType);
-                    return typeService.update(langType);
-                }).sum();
+        return typeService.update(langTypeList);
     }
 
     @DeleteMapping("/{id}")

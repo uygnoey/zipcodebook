@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
@@ -39,6 +41,11 @@ public class DownloadService {
         }
     }
 
+    public InputStream streamFromURL(String urlString) throws IOException {
+        URL website = new URL(urlString);
+        return website.openStream();
+    }
+
     private static void downloadFileFromURL(String urlString, File destination) throws Exception {
         URL website = new URL(urlString);
         ReadableByteChannel rbc;
@@ -48,5 +55,6 @@ public class DownloadService {
         fos.close();
         rbc.close();
     }
+
 
 }
